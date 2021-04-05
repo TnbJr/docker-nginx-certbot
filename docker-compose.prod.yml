@@ -12,8 +12,8 @@ services:
 
   nginx:
     volumes:
-      # - static:/usr/share/nginx/html
-      - ./frontend/build:/usr/share/nginx/html/
+      - static:/usr/share/nginx/html
+      # - ./frontend/build:/usr/share/nginx/html/
       - ./webserver/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./webserver/nginx/mochosolutions-stagin.com.conf:/etc/nginx/sites-enabled/mochosolutions-stagin.com.conf # change site.com (!)
       - ./webserver/nginx/nginx.conf:/etc/nginx/nginx.conf
